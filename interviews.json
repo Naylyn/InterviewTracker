@@ -6,8 +6,8 @@
     "company": "ATR (API Development)",
     "jobType": "SWE",
     "commute": "Remote",
-    "ats": "68",
-    "stage": "Initial Call",
+    "ats": "60",
+    "stage": "1. Initial Call",
     "status": "In Progress",
     "resume": "API Developer"
   },
@@ -19,7 +19,7 @@
     "jobType": "SWE",
     "commute": "Remote",
     "ats": "90",
-    "stage": "Initial Call",
+    "stage": "1. Initial Call",
     "status": "In Progress",
     "resume": "General / Full Stack"
   },
@@ -30,8 +30,8 @@
     "company": "Lake County",
     "jobType": "Full Stack",
     "commute": "Hybrid",
-    "ats": 0,
-    "stage": "Level 1 - Hiring Manager",
+    "ats": "0",
+    "stage": "2. Hiring Manager",
     "status": "In Progress",
     "resume": "Other"
   },
@@ -42,8 +42,8 @@
     "company": "Orange County Supervisor of Elections",
     "jobType": "SWE",
     "commute": "Onsite",
-    "ats": 0,
-    "stage": "Level 1 - Hiring Manager",
+    "ats": "0",
+    "stage": "2. Hiring Manager",
     "status": "In Progress",
     "resume": "Other"
   },
@@ -54,8 +54,8 @@
     "company": "Temenos",
     "jobType": "Full Stack",
     "commute": "Hybrid",
-    "ats": 88,
-    "stage": "Final Interview",
+    "ats": "88",
+    "stage": "4. Final Interview",
     "status": "No Hire",
     "resume": "General / Full Stack"
   },
@@ -66,10 +66,10 @@
     "company": "Deloitte (Fast Formula)",
     "jobType": "HCM Consultant",
     "commute": "Hybrid",
-    "ats": 70,
-    "stage": "Final Interview",
+    "ats": "70",
+    "stage": "5. Waiting for Offer",
     "status": "In Progress",
-    "resume": "HCM Consultant"
+    "resume": "HCM Consulting"
   },
   {
     "id": 5,
@@ -78,8 +78,8 @@
     "company": "ThreatLocker",
     "jobType": "SWE",
     "commute": "Onsite",
-    "ats": 75,
-    "stage": "Level 1 - Hiring Manager",
+    "ats": "75",
+    "stage": "2. Hiring Manager",
     "status": "In Progress",
     "resume": "General / Full Stack"
   },
@@ -90,8 +90,8 @@
     "company": "Judge Group",
     "jobType": "SWE",
     "commute": "Remote",
-    "ats": 70,
-    "stage": "Level 1 - Hiring Manager",
+    "ats": "70",
+    "stage": "2. Hiring Manager",
     "status": "No Hire",
     "resume": "General / Full Stack"
   },
@@ -103,7 +103,7 @@
     "jobType": "Both",
     "commute": "Remote",
     "ats": "62",
-    "stage": "Initial Call",
+    "stage": "1. Initial Call",
     "status": "In Progress",
     "resume": "ORC Technical Lead"
   }
