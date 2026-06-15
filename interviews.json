@@ -32,7 +32,7 @@
     "commute": "Hybrid",
     "ats": "0",
     "stage": "2. Hiring Manager",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "Other"
   },
   {
@@ -74,12 +74,12 @@
   {
     "id": 5,
     "appliedDate": "2026-05-08",
-    "lastDate": "2026-06-10",
+    "lastDate": "2026-06-15",
     "company": "ThreatLocker",
     "jobType": "SWE",
     "commute": "Onsite",
     "ats": "75",
-    "stage": "2. Hiring Manager",
+    "stage": "3. Team Meet",
     "status": "In Progress",
     "resume": "General / Full Stack"
   },
