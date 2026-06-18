@@ -22,6 +22,7 @@
     --red-soft: #fbe9e9;
     --gray: #5c6470;
     --gray-soft: #eef0f3;
+    --purple: hwb(310 6% 71%);
     --shadow: 0 1px 3px rgba(20,30,50,.08), 0 8px 24px rgba(20,30,50,.06);
     --radius: 10px;
   }
@@ -120,6 +121,8 @@
   .status.nohire::before { background: var(--red); }
   .status.offer { color: var(--green); }
   .status.offer::before { background: var(--green); }
+  .status.withdraw { color: var(--purple); }
+  .status.withdraw::before { background: var(--purple); }
 
   .score { font-weight: 700; font-variant-numeric: tabular-nums; }
   .score-bar { display: block; height: 4px; border-radius: 2px; margin-top: 4px; background: var(--line); overflow: hidden; }
@@ -238,12 +241,12 @@
     jobType: ["SWE", "HCM Consultant", "Both", "API/Database", "Full Stack", "Other"],
     commute: ["Remote", "Hybrid", "Onsite"],
     stage: ["1. Initial Call", "2. Hiring Manager", "3. Technical/Coding", "4. Final Interview", "5. Waiting for Offer", "6. Received Offer"],
-    status: ["In Progress", "Ghosted", "No Hire", "Offer"],
+    status: ["In Progress", "Ghosted", "No Hire", "Offer", "Withdraw"],
     resume: ["HCM Consulting", "API Developer", "ORC Technical Lead", "General / Full Stack", "Other"]
   };
 
   // Status sort priority: Offer, In Progress, No Hire, Ghosted
-  const STATUS_ORDER = { "offer": 0, "in progress": 1, "no hire": 2, "ghosted": 3 };
+  const STATUS_ORDER = { "offer": 0, "in progress": 1, "no hire": 2, "withdraw": 3, "ghosted": 4 };
 
   const STALE_DAYS = 14;
 
@@ -322,6 +325,8 @@
     if (k === "ghosted") return "ghosted";
     if (k === "no hire") return "nohire";
     if (k === "offer") return "offer";
+    if (k === "withdraw") return "withdraw";
+    
     return "inprogress";
   }
   function scoreColor(n) {

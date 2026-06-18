@@ -8,7 +8,7 @@
     "commute": "Remote",
     "ats": "60",
     "stage": "1. Initial Call",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "API Developer"
   },
   {
@@ -44,7 +44,7 @@
     "commute": "Onsite",
     "ats": "0",
     "stage": "2. Hiring Manager",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "Other"
   },
   {
@@ -68,7 +68,7 @@
     "commute": "Hybrid",
     "ats": "70",
     "stage": "5. Waiting for Offer",
-    "status": "In Progress",
+    "status": "No Hire",
     "resume": "HCM Consulting"
   },
   {
@@ -79,8 +79,8 @@
     "jobType": "SWE",
     "commute": "Onsite",
     "ats": "75",
-    "stage": "3. Technical/Coding",
-    "status": "In Progress",
+    "stage": "4. Final Interview",
+    "status": "Withdraw",
     "resume": "General / Full Stack"
   },
   {
