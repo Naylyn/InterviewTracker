@@ -7,7 +7,7 @@
     "jobType": "Both",
     "commute": "Hybrid",
     "ats": "72",
-    "stage": "1. Initial Call",
+    "stage": "2. Hiring Manager",
     "status": "In Progress",
     "resume": "Other"
   },
@@ -139,7 +139,7 @@
     "jobType": "Both",
     "commute": "Remote",
     "ats": "62",
-    "stage": "4. Final Interview",
+    "stage": "3. Technical/Coding",
     "status": "In Progress",
     "resume": "ORC Technical Lead"
   }
