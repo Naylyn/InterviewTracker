@@ -8,7 +8,7 @@
     "commute": "Hybrid",
     "ats": "72",
     "stage": "2. Hiring Manager",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "Other"
   },
   {
@@ -20,7 +20,7 @@
     "commute": "Remote",
     "ats": "72",
     "stage": "1. Initial Call",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "HCM Consulting"
   },
   {
@@ -32,7 +32,7 @@
     "commute": "Hybrid",
     "ats": "40",
     "stage": "1. Initial Call",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "General / Full Stack"
   },
   {
@@ -56,7 +56,7 @@
     "commute": "Remote",
     "ats": "90",
     "stage": "1. Initial Call",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "General / Full Stack"
   },
   {
@@ -140,7 +140,7 @@
     "commute": "Remote",
     "ats": "62",
     "stage": "3. Technical/Coding",
-    "status": "In Progress",
+    "status": "Ghosted",
     "resume": "ORC Technical Lead"
   }
 ]
