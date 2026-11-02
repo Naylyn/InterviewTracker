@@ -158,8 +158,12 @@
     padding: 16px 20px;
   }
   .counts h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); margin-bottom: 8px; }
-  .counts .line { font-size: 15px; color: var(--ink); padding: 3px 0; }
+  .counts .grid { display: grid; grid-template-columns: max-content auto; column-gap: 2.5em; align-items: baseline; }
+  .counts .line { display: contents; }
+  .counts .line > span { font-size: 15px; color: var(--ink); padding: 3px 0; }
   .counts .line b { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .counts .line .num { text-align: right; min-width: 3ch; }
+  .counts .line.total > span { border-top: 1px solid var(--line-strong); margin-top: 4px; padding-top: 7px; font-weight: 700; }
 
   footer.note { margin-top: 24px; font-size: 12px; color: var(--ink-soft); text-align: center; }
 
@@ -227,8 +231,12 @@
 
   <div class="counts" id="countsBox">
     <h4>Application Summary</h4>
-    <div class="line">Development jobs applied as of <b id="devDate"></b>: <b id="devCount">0</b></div>
-    <div class="line">HCM consultant jobs applied as of <b id="hcmDate"></b>: <b id="hcmCount">0</b></div>
+    <div class="grid">
+      <div class="line"><span>Development jobs applied as of <b class="asof"></b>:</span><span class="num"><b id="devCount">0</b></span></div>
+      <div class="line"><span>HCM consultant jobs applied as of <b class="asof"></b>:</span><span class="num"><b id="hcmCount">0</b></span></div>
+      <div class="line"><span>Other jobs applied as of <b class="asof"></b>:</span><span class="num"><b id="otherCount">0</b></span></div>
+      <div class="line total"><span>Total jobs applied as of <b class="asof"></b>:</span><span class="num"><b id="totalCount">0</b></span></div>
+    </div>
   </div>
 
   <footer class="note">
@@ -253,7 +261,7 @@
   const STALE_DAYS = 14;
 
   let data = [];
-  let counts = { development: 0, hcm: 0 };
+  let counts = { development: 0, hcm: 0, other: 0 };
   let editingId = null;
   let isDirty = false;
 
@@ -278,6 +286,7 @@
         const c = await res2.json();
         counts.development = Number(c.development) || 0;
         counts.hcm = Number(c.hcm) || 0;
+        counts.other = Number(c.other) || 0;
       }
     } catch (e) { /* counts optional */ }
     renderAll();
@@ -296,9 +305,10 @@
           const parsed = JSON.parse(reader.result);
           if (Array.isArray(parsed)) {
             data = parsed;
-          } else if (parsed && (("development" in parsed) || ("hcm" in parsed))) {
+          } else if (parsed && (("development" in parsed) || ("hcm" in parsed) || ("other" in parsed))) {
             counts.development = Number(parsed.development) || 0;
             counts.hcm = Number(parsed.hcm) || 0;
+            counts.other = Number(parsed.other) || 0;
           }
         } catch (e) {
           alert("Could not read " + file.name + ". Make sure it is valid JSON.");
@@ -384,10 +394,11 @@
   // ---- Counts label ----
   function renderCounts() {
     const d = today();
-    document.getElementById("devDate").textContent = d;
-    document.getElementById("hcmDate").textContent = d;
+    document.querySelectorAll("#countsBox .asof").forEach(el => { el.textContent = d; });
     document.getElementById("devCount").textContent = counts.development;
     document.getElementById("hcmCount").textContent = counts.hcm;
+    document.getElementById("otherCount").textContent = counts.other;
+    document.getElementById("totalCount").textContent = counts.development + counts.hcm + counts.other;
   }
 
   function selectMarkup(field, current) {
